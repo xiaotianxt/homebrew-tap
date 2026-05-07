@@ -1,10 +1,10 @@
 class Cx < Formula
   desc "Fast local Codex launcher, stdin wrapper, and slot manager"
   homepage "https://github.com/xiaotianxt/cx"
-  url "https://github.com/xiaotianxt/cx/releases/download/v0.2.25/cx-v0.2.25-darwin-arm64.tar.gz"
-  sha256 "51d41aa8746e0b7af5067a427b9064fa0ec67ccf0efdc75429d8046fee0742eb"
+  url "https://github.com/xiaotianxt/cx/releases/download/v0.2.26/cx-v0.2.26-darwin-arm64.tar.gz"
+  sha256 "d6bd7fe52f70b503f4a329b2a29749b1229a59c7d572a62189e20a1408bd3653"
   license "MIT"
-  version "0.2.25"
+  version "0.2.26"
 
   depends_on arch: :arm64
 

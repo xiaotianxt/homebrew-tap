@@ -1,5 +1,5 @@
 class Tg < Formula
-  desc "macOS Telegram 聊天记录读取 CLI 工具"
+  desc "本地 Telegram 桌面聊天记录读取 CLI 工具"
   homepage "https://github.com/xiaotianxt/tg"
   version "1.4.13"
   license "MIT"

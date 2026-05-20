@@ -49,6 +49,6 @@ class Bro < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#<built-in function bin>/bro --version")
+    assert_match version.to_s, shell_output("#{bin}/bro --version")
   end
 end

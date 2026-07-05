@@ -1,10 +1,10 @@
 class ChatMemory < Formula
   desc "Local-first search and capture service for ChatGPT and agent chat history"
   homepage "https://github.com/xiaotianxt/chat-memory"
-  url "https://github.com/xiaotianxt/chat-memory/releases/download/v0.1.0/chat-memory-v0.1.0-darwin-arm64.tar.gz"
-  sha256 "31d1b87494024a9309d5fbfc1cde713d45c2cbdaf3e5820e44ea6e351eedb8c0"
+  url "https://github.com/xiaotianxt/chat-memory/releases/download/v0.1.1/chat-memory-v0.1.1-darwin-arm64.tar.gz"
+  sha256 "cd40657a4c38360c9471685f2aad35a154fbfc5bd58c27f1e1cdd8fb9e3755b0"
   license "MIT"
-  version "0.1.0"
+  version "0.1.1"
 
   depends_on arch: :arm64
 

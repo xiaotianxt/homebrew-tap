@@ -22,17 +22,14 @@ class ChatMemory < Formula
   end
 
   def post_install
-    (var/"chat-memory").mkpath
     (var/"log").mkpath
   end
 
   service do
     run [
       opt_bin/"chat-memory",
-      "--cache", var/"chat-memory/index.sqlite3",
       "chatgpt-serve",
       "--addr", "127.0.0.1:37531",
-      "--token-file", var/"chat-memory/chatgpt-ingest-token"
     ]
     keep_alive true
     log_path var/"log/chat-memory.log"

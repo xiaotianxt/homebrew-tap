@@ -8,7 +8,6 @@ cask "alt-tab" do
   desc "Automatically rebased local testing build of AltTab"
   homepage "https://github.com/xiaotianxt/alt-tab-macos"
 
-  auto_updates true
   depends_on :macos
 
   app "AltTab.app"

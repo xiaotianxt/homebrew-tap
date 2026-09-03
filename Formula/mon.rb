@@ -1,10 +1,10 @@
 class Mon < Formula
   desc "AI-native Monarch Money CLI for structured local finance workflows"
   homepage "https://github.com/xiaotianxt/mon"
-  url "https://github.com/xiaotianxt/mon/releases/download/v0.2.2/mon-v0.2.2-darwin-arm64.tar.gz"
-  sha256 "5f297897392fc00b53365a96b5d58e5c258f821e2f20a9594d580a4ab695cbe6"
+  url "https://github.com/xiaotianxt/mon/releases/download/v0.3.0/mon-v0.3.0-darwin-arm64.tar.gz"
+  sha256 "74b485930ef3c1481ad8ec3c8516aec1bd0e35f248f188968348f5532c6c5005"
   license "MIT"
-  version "0.2.2"
+  version "0.3.0"
 
   depends_on arch: :arm64
 

@@ -1,13 +1,13 @@
 class Tg < Formula
   desc "本地 Telegram 桌面聊天记录读取 CLI 工具"
   homepage "https://github.com/xiaotianxt/tg"
-  version "2.6.0"
+  version "2.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/xiaotianxt/tg/releases/download/v2.6.0/tg-v2.6.0-darwin-arm64.tar.gz"
-      sha256 "9d4fd900000d09bd87978f98f22be75e3bb29268d587ae85b8b71b595a247af4"
+      url "https://github.com/xiaotianxt/tg/releases/download/v2.7.0/tg-v2.7.0-darwin-arm64.tar.gz"
+      sha256 "9a86f3e739d87c46512dc7b4b2f59b4021eb220a97c969b5a1078f2455ce3533"
     else
       odie "tg provides prebuilt macOS releases for Apple Silicon only"
     end
@@ -15,11 +15,11 @@ class Tg < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/xiaotianxt/tg/releases/download/v2.6.0/tg-v2.6.0-linux-arm64.tar.gz"
-      sha256 "f9007e90178ccab422334f2e450846254591ab1345eaf4bd8dd26a047c998f0d"
+      url "https://github.com/xiaotianxt/tg/releases/download/v2.7.0/tg-v2.7.0-linux-arm64.tar.gz"
+      sha256 "6120e8ca97e31ccee500d116fe695c583d226bfbf7f51f620ed640118581d78e"
     elsif Hardware::CPU.intel?
-      url "https://github.com/xiaotianxt/tg/releases/download/v2.6.0/tg-v2.6.0-linux-x86_64.tar.gz"
-      sha256 "34ab1620e394b5454a498d3a48fd20ec9ad97a1ad212f82cb4ceebfe7d31e0a4"
+      url "https://github.com/xiaotianxt/tg/releases/download/v2.7.0/tg-v2.7.0-linux-x86_64.tar.gz"
+      sha256 "ab7f0f918f00490384af570f36b80520377cc3857a550a19d66012c9645bdc25"
     else
       odie "unsupported Linux architecture"
     end

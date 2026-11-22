@@ -1,16 +1,16 @@
 class Bro < Formula
-  desc "Rust-native local MCP server for browser automation"
+  desc "Local MCP server for browser automation"
   homepage "https://github.com/xiaotianxt/bro"
-  version "1.7.0"
+  version "2.0.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/xiaotianxt/bro/releases/download/v1.7.0/bro-v1.7.0-aarch64-apple-darwin.tar.gz"
-      sha256 "a28d55f65be669f1468894f2e4bec131d6ca4d1360304f94da63802c39c32a6c"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-aarch64-apple-darwin.tar.gz"
+      sha256 "17cf81217b068e1c24f7fda50d41b50096ff79f3bee59c19534f55227d28db07"
     elsif Hardware::CPU.intel?
-      url "https://github.com/xiaotianxt/bro/releases/download/v1.7.0/bro-v1.7.0-x86_64-apple-darwin.tar.gz"
-      sha256 "2258e9e0198c4ceca9a768d41b419cb1f4055c727a53b4013c4be5f4c1fa2aff"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-x86_64-apple-darwin.tar.gz"
+      sha256 "a269aa92c599c968d27b4e71015319aa616322560c165d87c26fde68a437831b"
     else
       odie "unsupported macOS architecture"
     end
@@ -18,11 +18,11 @@ class Bro < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/xiaotianxt/bro/releases/download/v1.7.0/bro-v1.7.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "28017ac03350a91a5a357216868b01e3cdc251f99817088b60eba3218e3fcda9"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5e84b7b19b7ab29448b4e45767e9f6bdc229fc0e765acc449100b3aefab5dff1"
     elsif Hardware::CPU.intel?
-      url "https://github.com/xiaotianxt/bro/releases/download/v1.7.0/bro-v1.7.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6850ec47a674e972ac58afd24d85e4a03e7c910c0d270ba103a2cebfdafa00a5"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "3adca9e46ca897403cb15736d7f1b83173ee778e7c91667a0cdc75f3f8370f16"
     else
       odie "unsupported Linux architecture"
     end
@@ -30,17 +30,17 @@ class Bro < Formula
 
   head do
     url "https://github.com/xiaotianxt/bro.git", branch: "main"
-    depends_on "rust" => :build
+    depends_on "go" => :build
   end
 
   resource "extension" do
-    url "https://github.com/xiaotianxt/bro/releases/download/v1.7.0/bro-extension-v1.7.0.zip"
-    sha256 "78c11e5a04edf87aa800577f42c9c94c5d3f06d65ff590689345692fd2739d1e"
+    url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-extension-v2.0.0.zip"
+    sha256 "98ef34ca9734335151e73feea06c9d69cf208fce78dbd75daa1a00839344e046"
   end
 
   def install
     if build.head?
-      system "cargo", "install", "--locked", "--bin", "bro", "--root", prefix, "."
+      system "go", "build", *std_go_args(output: bin/"bro"), "./cmd/bro"
     else
       bin.install "bro"
     end

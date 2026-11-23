@@ -1,16 +1,16 @@
 class Bro < Formula
   desc "Local MCP server for browser automation"
   homepage "https://github.com/xiaotianxt/bro"
-  version "2.0.0"
+  version "2.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-aarch64-apple-darwin.tar.gz"
-      sha256 "17cf81217b068e1c24f7fda50d41b50096ff79f3bee59c19534f55227d28db07"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.1.0/bro-v2.1.0-aarch64-apple-darwin.tar.gz"
+      sha256 "3e65c3d7a4f31de8b86b02c6abcaf4dc81eca917da77e44cd0f36e47539e1d61"
     elsif Hardware::CPU.intel?
-      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-x86_64-apple-darwin.tar.gz"
-      sha256 "a269aa92c599c968d27b4e71015319aa616322560c165d87c26fde68a437831b"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.1.0/bro-v2.1.0-x86_64-apple-darwin.tar.gz"
+      sha256 "5a82ed89eb2b7b2e78afe8debc9d03c524f88e8b2f1688b3003e1222e7786f43"
     else
       odie "unsupported macOS architecture"
     end
@@ -18,11 +18,11 @@ class Bro < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5e84b7b19b7ab29448b4e45767e9f6bdc229fc0e765acc449100b3aefab5dff1"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.1.0/bro-v2.1.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a9da0e537faf51da000c876dcda279d5a914f0473586750d93474031f917e40d"
     elsif Hardware::CPU.intel?
-      url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-v2.0.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3adca9e46ca897403cb15736d7f1b83173ee778e7c91667a0cdc75f3f8370f16"
+      url "https://github.com/xiaotianxt/bro/releases/download/v2.1.0/bro-v2.1.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "098758699fe9764492b0ce44c278a99ddcf2f305b7118a559bde4b21a1e33eae"
     else
       odie "unsupported Linux architecture"
     end
@@ -34,8 +34,8 @@ class Bro < Formula
   end
 
   resource "extension" do
-    url "https://github.com/xiaotianxt/bro/releases/download/v2.0.0/bro-extension-v2.0.0.zip"
-    sha256 "98ef34ca9734335151e73feea06c9d69cf208fce78dbd75daa1a00839344e046"
+    url "https://github.com/xiaotianxt/bro/releases/download/v2.1.0/bro-extension-v2.1.0.zip"
+    sha256 "c34548f6e2a85958360250e1e1a43aafef8a5127be9eaf841e700cd34672eea5"
   end
 
   def install
